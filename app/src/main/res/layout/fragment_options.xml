@@ -10,23 +10,24 @@
         android:id="@+id/buttonAdd"
         android:layout_width="120dp"
         android:layout_height="100dp"
+        android:layout_marginBottom="36dp"
         android:text="@string/add"
         android:textSize="16sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonSub"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMultiply"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.199"
+        app:layout_constraintHorizontal_bias="0.35"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/buttonSub"
         android:layout_width="120dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="380dp"
+        android:layout_marginBottom="172dp"
         android:text="@string/sub"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintHorizontal_bias="0.321"
         app:layout_constraintStart_toEndOf="@+id/buttonAdd" />
 
     <Button
@@ -37,7 +38,7 @@
         android:textSize="16sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/buttonDivide"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.199"
+        app:layout_constraintHorizontal_bias="0.351"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -48,9 +49,9 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintHorizontal_bias="0.321"
         app:layout_constraintStart_toEndOf="@+id/buttonMultiply"
         app:layout_constraintTop_toBottomOf="@+id/buttonSub"
-        app:layout_constraintVertical_bias="0.275" />
+        app:layout_constraintVertical_bias="0.526" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
