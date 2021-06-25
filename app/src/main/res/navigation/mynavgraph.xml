@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mynavgraph.xml"
+    app:startDestination="@id/optionsFragment">
+
+    <fragment
+        android:id="@+id/optionsFragment"
+        android:name="com.example.calculator1.OptionsFragment"
+        android:label="fragment_options"
+        tools:layout="@layout/fragment_options" >
+        <action
+            android:id="@+id/action_optionsFragment_to_valueEnteringFragment"
+            app:destination="@id/valueEnteringFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/valueEnteringFragment"
+        android:name="com.example.calculator1.valueEnteringFragment"
+        android:label="fragment_value_entering"
+        tools:layout="@layout/fragment_value_entering" >
+        <action
+            android:id="@+id/action_valueEnteringFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <argument
+            android:name="operationName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.calculator1.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_optionsFragment"
+            app:destination="@id/optionsFragment"
+            app:popUpTo="@id/optionsFragment" />
+        <argument
+            android:name="num1"
+            app:argType="float" />
+        <argument android:name="num2"
+            app:argType="float" />
+        <argument
+            android:name="action"
+            app:argType="string" />
+    </fragment>
+</navigation>
